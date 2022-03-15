@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b24f37bdbd.js" crossorigin="anonymous"></script>
+    <title>Online Quran Tutor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'popkins', sans-serif;
+        }
+        
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background: #FFF;
+            padding: 25px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .container .title {
+            font-size: 25px;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        .container .title::before {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 30px;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        
+        .container form .user-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 12px 0;
+        }
+        
+        form .user-details .input-box {
+            width: calc(100%/1 - 20px);
+            margin: 20px 0 12px 0;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .user-details .input-box input {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .user-details .input-box .details {
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .user-details .input-box input:focus,
+        .user-details .input-box input:valid,
+        {
+            border-color: #9b59b6
+        }
+        
+        .button {
+            margin-right: 535px;
+            margin-top: 20px;
+        }
+        
+        .btn1 {
+            background-color: #008CBA;
+            border-radius: 3px;
+            border: black 2px solid;
+            padding-left: 5px;
+            padding: 5px, 5px, 5px, 5px;
+            padding-right: 5px;
+        }
+        
+        .btn-floating {
+            position: fixed;
+            right: 25px;
+            overflow: hidden;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            border: 0;
+            z-index: 9999;
+            color: white;
+            transition: .2s;
+        }
+        
+        .btn-floating:hover {
+            width: auto;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+        
+        .btn-floating span {
+            font-size: 16px;
+            margin-left: 5px;
+            transition: .2s;
+            line-height: 0px;
+            display: none;
+        }
+        
+        .btn-floating:hover span {
+            display: inline-block;
+        }
+        
+        .btn-floating:hover img {
+            margin-bottom: -3px;
+        }
+        
+        .btn-floating.whatsapp {
+            bottom: 10px;
+            border: 2px solid white;
+            background-color: white;
+            padding-right: 50px;
+        }
+        
+        .btn-floating.facebook {
+            border: 2px solid white;
+            background-color: white;
+            padding-right: 50px;
+            margin-bottom: 30px;
+        }
+        
+        .btn-floating.instagram {
+            bottom: 20px;
+            border: 2px solid white;
+            background-color: white;
+            margin-bottom: 40px;
+            margin-right: 10px;
+        }
+        
+        .btn-floating.whatsapp:hover {
+            background-color: #1f7a17;
+        }
+        
+        .btn-floating.instagram:hover {
+            background-color: red;
+        }
+        
+        .btn-floating.facebook:hover {
+            background-color: #1876F3;
+        }
+        
+        .btn-floating.facebook {
+            bottom: 85px;
+            background-color: white;
+            padding-right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="text-warning">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <a class="navbar-brand" href="#">Online Quran Tutor</a></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item  ">
+                <a class="nav-link" href="index.html">Home  </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="About.html">About  </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="Course.html">Courses  </a>
+            </li>
+
+
+            <li class="nav-item dropdown">
+
+
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="ContactUs.html">Contact Us <span class="sr-only">(current)</span> </a>
+            </li>
+        </ul>
+    </div>
+
+    </nav>
+    <div> <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </symbol>
+        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+        </symbol>
+        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </symbol>
+      </svg>
+
+        <div id=container3 class="alert alert-primary d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+            <div> Online Quran Tutor is strict about Contact policy. We will not share your contact information with any 3rd party. Our communication methods are safe and reliable.
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="title">
+            <h2>Contact Us</h2>
+            <h3>Register for Free Trail Classes </h3>
+        </div>
+        <form action="https://formspree.io/f/xwkyqegj" method="POST">
+            <div class="user-details">
+                <div class="input-box">
+                    <label for="fname">Enter Your Name </label>
+                    <input type="text" id="fname" name="fname">
+
+                </div>
+                <div class="input-box">
+                    <label for="fname">Enter Your Email </label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div class="input-box">
+                    <label for="fname">Enter Your Phone Number </label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div class="input-box">
+                    <label for="fname">Enter Your Country Name </label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div class="gender-details">
+                    <span class="gender-title">Gender</span>
+
+                    <div class="category">
+                        <br>
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">Male</label><br>
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css">Female</label><br>
+
+                    </div>
+                </div>
+                <div class="button">
+                    <input class=btn1 type="submit"></input>
+                </div>
+            </div>
+    </div>
+    </form>
+    </div>
+    <a href="https://www.facebook.com/Quran-Tutor-Online-100725275550475/" target="blank">
+        <button class="btn-floating facebook">
+            <img src="https://img.icons8.com/color/48/000000/facebook-new.png"/>
+            <span>
+                 Quran Tutor Online
+            </span>
+        </button>
+    </a>7
+    <a href="https://web.whatsapp.com/">
+        <button class="btn-floating whatsapp">
+            <img src="https://img.icons8.com/color/48/000000/whatsapp--v2.png"/>
+            <span>
+                
+                +92 3480005752
+            </span>
+        </button>
+    </a>
+    <a href="https://instagram.com/online_quran_tutor_19?utm_medium=copy_link">
+        <button class="btn-floating instagram">
+            <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/>
+            <span>
+                online_quran_tutor_19
+            </span>
+        </button>
+    </a>
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item">
+                </a>
+            </li>
+            <li class="nav-item"><a href="Course.html" class="nav-link px-2 text-muted">Courses</a></li>
+            <li class="nav-item"><a href="ContactUsF.html" class="nav-link px-2 text-muted">Contact Us</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2021 Company, Inc</p>
+    </footer>
+
+
+    </nav>
+
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+
+
+</html>
